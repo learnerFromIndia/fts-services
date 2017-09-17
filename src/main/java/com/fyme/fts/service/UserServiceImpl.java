@@ -1,15 +1,15 @@
 package com.fyme.fts.service;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import com.fyme.fts.dao.UserDao;
 import com.fyme.fts.model.User;
-
-
 
 @Service("userService")
 public class UserServiceImpl implements UserService{
@@ -18,11 +18,19 @@ public class UserServiceImpl implements UserService{
 	
 	private static List<ArrayList<User>> users;
 	
+	@Autowired
+	UserDao userDao;
+	
 	static{
 		users= populateDummyUsers();
 	}
 
+	@Transactional
 	public List<ArrayList<User>> findAllUsers() {
+		List<User> employees = userDao.findAllEmployes();
+		for(User user : employees){
+			System.out.println(user);
+		}
 		return users;
 	}
 	

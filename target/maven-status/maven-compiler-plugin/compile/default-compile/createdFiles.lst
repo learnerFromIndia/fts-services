@@ -1,6 +1,9 @@
 com\fyme\fts\model\User.class
 com\fyme\fts\util\CustomErrorType.class
+com\fyme\fts\dao\UserDaoImpl.class
+com\fyme\fts\dao\UserDao.class
 com\fyme\fts\service\UserServiceImpl.class
+com\fyme\fts\model\Address.class
 com\fyme\fts\controller\RestApiController.class
 com\fyme\fts\service\UserService.class
 com\fyme\fts\SpringBootRestApiApp.class

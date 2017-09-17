@@ -1,6 +1,9 @@
-E:\angular\fts-services\src\main\java\com\fyme\fts\SpringBootRestApiApp.java
-E:\angular\fts-services\src\main\java\com\fyme\fts\model\User.java
-E:\angular\fts-services\src\main\java\com\fyme\fts\service\UserService.java
-E:\angular\fts-services\src\main\java\com\fyme\fts\controller\RestApiController.java
-E:\angular\fts-services\src\main\java\com\fyme\fts\service\UserServiceImpl.java
-E:\angular\fts-services\src\main\java\com\fyme\fts\util\CustomErrorType.java
+E:\angular\fts-apis\fts-services\src\main\java\com\fyme\fts\model\User.java
+E:\angular\fts-apis\fts-services\src\main\java\com\fyme\fts\dao\UserDao.java
+E:\angular\fts-apis\fts-services\src\main\java\com\fyme\fts\dao\UserDaoImpl.java
+E:\angular\fts-apis\fts-services\src\main\java\com\fyme\fts\service\UserService.java
+E:\angular\fts-apis\fts-services\src\main\java\com\fyme\fts\SpringBootRestApiApp.java
+E:\angular\fts-apis\fts-services\src\main\java\com\fyme\fts\util\CustomErrorType.java
+E:\angular\fts-apis\fts-services\src\main\java\com\fyme\fts\controller\RestApiController.java
+E:\angular\fts-apis\fts-services\src\main\java\com\fyme\fts\model\Address.java
+E:\angular\fts-apis\fts-services\src\main\java\com\fyme\fts\service\UserServiceImpl.java
