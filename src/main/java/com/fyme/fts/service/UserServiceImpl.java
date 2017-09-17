@@ -80,10 +80,28 @@ public class UserServiceImpl implements UserService{
 		List<ArrayList<User>> users = new ArrayList<ArrayList<User>>();
 		ArrayList<User> user1 = new ArrayList<User>();
 		user1.add(new User(counter.incrementAndGet(), 0, "amit", "employee", "fake-jwt-token"));
+		user1.add(new User(counter.incrementAndGet(), 0, "ajith", "employee", "fake-jwt-token"));
+		user1.add(new User(counter.incrementAndGet(), 0, "umang", "employee", "fake-jwt-token"));
+		user1.add(new User(counter.incrementAndGet(), 0, "chandran", "employee", "fake-jwt-token"));
 		ArrayList<User> user2 = new ArrayList<User>();
-		user2.add(new User(counter.incrementAndGet(), 1, "ajith", "employee", "fake-jwt-token"));	
+		user2.add(new User(counter.incrementAndGet(), 1, "Tom", "employee", "fake-jwt-token"));	
+		user2.add(new User(counter.incrementAndGet(), 1, "Jasmeet", "employee", "fake-jwt-token"));	
+		user2.add(new User(counter.incrementAndGet(), 1, "Rich", "employee", "fake-jwt-token"));	
+		user2.add(new User(counter.incrementAndGet(), 1, "Bill", "employee", "fake-jwt-token"));	
+		ArrayList<User> user3 = new ArrayList<User>();
+		user3.add(new User(counter.incrementAndGet(), 2, "Cody", "employee", "fake-jwt-token"));	
+		user3.add(new User(counter.incrementAndGet(), 2, "Dmitry", "employee", "fake-jwt-token"));	
+		user3.add(new User(counter.incrementAndGet(), 2, "Elana", "employee", "fake-jwt-token"));	
+		user3.add(new User(counter.incrementAndGet(), 2, "Jennifer", "employee", "fake-jwt-token"));	
+		ArrayList<User> user4 = new ArrayList<User>();
+		user4.add(new User(counter.incrementAndGet(), 3, "Jen", "employee", "fake-jwt-token"));	
+		user4.add(new User(counter.incrementAndGet(), 3, "Amanada", "employee", "fake-jwt-token"));	
+		user4.add(new User(counter.incrementAndGet(), 3, "John", "employee", "fake-jwt-token"));	
+		user4.add(new User(counter.incrementAndGet(), 3, "Janet", "employee", "fake-jwt-token"));	
 		users.add(user1);
 		users.add(user2);
+		users.add(user3);
+		users.add(user4);
 		return users;
 	}
 
