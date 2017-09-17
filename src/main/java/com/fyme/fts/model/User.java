@@ -4,20 +4,26 @@ public class User {
 
 	private long id;
 
+	private int index;
+	
 	private String username;
 
 	private String password;
 	
+	private String type;
+	
 	private String token;
-
+	
 	public User() {
 		id = 0;
 	}
 
-	public User(long id, String username, String token) {
+	public User(long id, int index, String username, String type, String token) {
 		super();
 		this.id = id;
+		this.index = index;
 		this.username = username;
+		this.type = type;
 		this.token = token;
 	}
 
@@ -27,6 +33,14 @@ public class User {
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public int getIndex() {
+		return index;
+	}
+
+	public void setIndex(int index) {
+		this.index = index;
 	}
 
 	public String getUsername() {
@@ -43,6 +57,14 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	public String getToken() {

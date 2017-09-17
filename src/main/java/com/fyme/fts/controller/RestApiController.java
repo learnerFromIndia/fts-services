@@ -1,5 +1,6 @@
 package com.fyme.fts.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -39,20 +40,19 @@ public class RestApiController {
 	@RequestMapping(value = "/authenticate/{username}/{password}", produces = "application/json")
 	public ResponseEntity<User> authenticate(@PathVariable("username") String username, @PathVariable("password") String password) {
 		System.out.println("Auth API called ..." + username + " " + password);
-		User user = new User(counter.incrementAndGet(),username, "fake-jwt-token");
+		User user = new User(counter.incrementAndGet(), 0, username, "employee", "fake-jwt-token");
 		return new ResponseEntity<User>(user, HttpStatus.OK);
 	}
 	
 	// -------------------Retrieve All Users---------------------------------------------
 
-	@RequestMapping(value = "/user/", method = RequestMethod.GET)
-	public ResponseEntity<List<User>> listAllUsers() {
-		List<User> users = userService.findAllUsers();
+	@RequestMapping(value = "/users", method = RequestMethod.GET, produces = "application/json")
+	public ResponseEntity<List<ArrayList<User>>> listAllUsers() {
+		List<ArrayList<User>> users = userService.findAllUsers();
 		if (users.isEmpty()) {
 			return new ResponseEntity(HttpStatus.NO_CONTENT);
-			// You many decide to return HttpStatus.NOT_FOUND
 		}
-		return new ResponseEntity<List<User>>(users, HttpStatus.OK);
+		return new ResponseEntity<List<ArrayList<User>>>(users, HttpStatus.OK);
 	}
 	
 	// -------------------Retrieve Single User------------------------------------------

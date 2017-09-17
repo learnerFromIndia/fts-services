@@ -1,6 +1,7 @@
 package com.fyme.fts.service;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.fyme.fts.model.User;
@@ -17,7 +18,7 @@ public interface UserService {
 	
 	void deleteUserById(long id);
 
-	List<User> findAllUsers();
+	List<ArrayList<User>> findAllUsers();
 	
 	void deleteAllUsers();
 	

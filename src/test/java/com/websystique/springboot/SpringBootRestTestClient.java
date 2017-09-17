@@ -42,7 +42,7 @@ public class SpringBootRestTestClient {
     private static void createUser() {
         System.out.println("Testing create User API----------");
         RestTemplate restTemplate = new RestTemplate();
-        User user = new User(0,"Sarah", "fake-jwt-token");
+        User user = new User(0, 0, "Sarah", "employee", "fake-jwt-token");
         URI uri = restTemplate.postForLocation(REST_SERVICE_URI+"/user/", user, User.class);
         System.out.println("Location : "+uri.toASCIIString());
     }
@@ -51,7 +51,7 @@ public class SpringBootRestTestClient {
     private static void updateUser() {
         System.out.println("Testing update User API----------");
         RestTemplate restTemplate = new RestTemplate();
-        User user  = new User(1,"Tomy", "fake-jwt-token");
+        User user  = new User(1, 1, "Tomy", "employee", "fake-jwt-token");
         restTemplate.put(REST_SERVICE_URI+"/user/1", user);
         System.out.println(user);
     }
