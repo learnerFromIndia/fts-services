@@ -29,16 +29,16 @@ public class Address implements Serializable{
 	private String address;
 	
 	@NotNull
-	private Double latitude;
+	private String latitude;
 	
 	@NotNull
-	private Double longitude;
+	private String longitude;
 	
 	public Address() {
 		super();
 	}
 
-	public Address(long id, String address, Double latitude, Double longitude) {
+	public Address(long id, String address, String latitude, String longitude) {
 		super();
 		this.id = id;
 		this.address = address;
@@ -70,19 +70,19 @@ public class Address implements Serializable{
 		this.address = address;
 	}
 
-	public Double getLatitude() {
+	public String getLatitude() {
 		return latitude;
 	}
 
-	public void setLatitude(Double latitude) {
+	public void setLatitude(String latitude) {
 		this.latitude = latitude;
 	}
 
-	public Double getLongitude() {
+	public String getLongitude() {
 		return longitude;
 	}
 
-	public void setLongitude(Double longitude) {
+	public void setLongitude(String longitude) {
 		this.longitude = longitude;
 	}
 

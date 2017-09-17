@@ -41,8 +41,8 @@ public class GoogleApiTestClient {
 			try {
 				String latLongs[] = mapsUtil.getCordinates(user.getAddress().getAddress(), "India");
 				System.err.println("Latitude: "+latLongs[0]+" and Longitude: "+latLongs[1]);
-				user.getAddress().setLatitude(Double.valueOf(latLongs[0]));
-				user.getAddress().setLongitude(Double.valueOf(latLongs[1]));
+				user.getAddress().setLatitude(latLongs[0]);
+				user.getAddress().setLongitude(latLongs[1]);
 				userService.updateUser(user);
 			} catch (Exception e) {
 				e.printStackTrace();
