@@ -23,5 +23,7 @@ public interface UserService {
 	void deleteAllUsers();
 	
 	boolean isUserExist(User user);
+
+	public List<User> findAllEmployes();
 	
 }

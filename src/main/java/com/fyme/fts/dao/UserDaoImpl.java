@@ -18,9 +18,12 @@ public class UserDaoImpl implements UserDao, CrudRepository<User, Serializable>{
 	EntityManager entityManager;
 	
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<User> findAllEmployes() {
 		return entityManager.createQuery("from User where type = 'employee'").getResultList();
+	}
+	
+	public void updateCoordinateForUser(User user){
+		entityManager.merge(user);
 	}
 	
 	@Override

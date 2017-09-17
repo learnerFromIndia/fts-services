@@ -25,13 +25,18 @@ public class UserServiceImpl implements UserService{
 		users= populateDummyUsers();
 	}
 
-	@Transactional
 	public List<ArrayList<User>> findAllUsers() {
-		List<User> employees = userDao.findAllEmployes();
+		List<User> employees = this.findAllEmployes();
 		for(User user : employees){
 			System.out.println(user);
 		}
 		return users;
+	}
+	
+	@Transactional
+	public List<User> findAllEmployes() {
+		List<User> employees = userDao.findAllEmployes();
+		return employees;
 	}
 	
 	public User findById(long id) {
@@ -61,9 +66,9 @@ public class UserServiceImpl implements UserService{
 		//users.add(user);
 	}
 
+	@Transactional
 	public void updateUser(User user) {
-		int index = users.indexOf(user);
-		//users.set(index, user);
+		userDao.updateCoordinateForUser(user);
 	}
 
 	public void deleteUserById(long id) {

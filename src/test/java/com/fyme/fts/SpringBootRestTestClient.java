@@ -1,4 +1,4 @@
-package com.websystique.springboot;
+package com.fyme.fts;
  
 import java.net.URI;
 import java.util.LinkedHashMap;
